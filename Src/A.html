@@ -185,30 +185,6 @@
 
   <!-- aos -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-
-    /* cursor */
-    const cursor = document.querySelector(".cursor");
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-    });
-
-    /* theme */
-    const themeBtn = document.getElementById("themeBtn");
-    themeBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light");
-      if (document.body.classList.contains("light")) {
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      }
-      else {
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
-    });
-  </script>
+  <script src="Logic.js"></script>
 </body>
 </html>
