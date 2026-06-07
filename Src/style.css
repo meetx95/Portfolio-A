@@ -306,14 +306,48 @@ section {
   font-weight: 700; }
 
 /* github */
-.github-box {
-  padding: 40px;
-  text-align: center; }
-.github-box img {
-  width: 100%;
-  max-width: 900px;
+.github-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;  }
+.github-card {
+  padding: 25px;
   border-radius: 20px;
-  margin-top: 30px; }
+  overflow: hidden;
+  transition: .4s;  }
+.github-card:hover {
+  transform: translateY(-10px); }
+.github-card img {
+  width: 100%;
+  border-radius: 15px;  }
+.github-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;  }
+.github-profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #00e5ff;  }
+.github-profile h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px; }
+.github-profile p {
+  opacity: .8;
+  margin-bottom: 15px;  }
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00e5ff, #7b61ff);
+  color: white;
+  font-weight: 600;  }
 
 /* contact */
 .contact-box {
@@ -374,9 +408,13 @@ section {
 
 /* footer */
 footer {
-  padding: 40px;
+  padding: 18px 8%;
   text-align: center;
-  color: var(--secondary);  }
+  color: var(--secondary);  
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border);
+}
 
 /* responsive */
 @media(max-width:1000px) {
@@ -396,4 +434,4 @@ footer {
   .btn {
     width: 100%;
     text-align: center; } }
-      
+  
